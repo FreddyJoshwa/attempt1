@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Job Vacancy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Post a Job Vacancy</h2>
+
+        <!-- Job Vacancy Form -->
+        <div id="jobForm">
+            <input type="text" id="jobTitle" placeholder="Job Title">
+            <textarea id="jobDescription" placeholder="Job Description"></textarea>
+            <input type="number" id="volunteersNeeded" placeholder="Number of Volunteers Needed">
+            <button onclick="saveJobVacancy()">Post Job</button>
+        </div>
+
+        <!-- Section to Display Saved Job Details -->
+        <div id="savedJobSection" style="display: none;">
+            <h3>Saved Job Vacancy</h3>
+            <p><strong>Title:</strong> <span id="savedJobTitle"></span></p>
+            <p><strong>Description:</strong> <span id="savedJobDescription"></span></p>
+            <p><strong>Volunteers Needed:</strong> <span id="savedVolunteersNeeded"></span></p>
+        </div>
+
+        <!-- Section to Display Volunteer Profiles for Approval -->
+        <div id="volunteerApprovalSection" style="display: none;">
+            <h3>Approve Volunteers</h3>
+            <div id="volunteerList"></div>
+        </div>
+
+        <!-- Back Button -->
+        <button onclick="goBack()">Back to Dashboard</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Volunteer Dashboard</h2>
+        
+        <!-- Button to Add Volunteer Profile -->
+        <button onclick="showVolunteerForm()">Add Volunteer Profile</button>
+
+        <!-- Volunteer Profile Form (Initially Hidden) -->
+        <div id="volunteerForm" style="display: none;">
+            <h3>Enter Your Volunteer Details</h3>
+            <input type="text" id="volunteerName" placeholder="Full Name">
+            <input type="text" id="volunteerSkills" placeholder="Skills (e.g., Teaching, Cooking)">
+            <input type="text" id="volunteerContact" placeholder="Mobile Number">
+            <button onclick="saveVolunteerProfile()">Save Profile</button>
+        </div>
+
+        <!-- Section to Display Saved Volunteer Profile -->
+        <div id="volunteerProfileSection" style="display: none;">
+            <h3>Your Profile</h3>
+            <p><strong>Name:</strong> <span id="profileName"></span></p>
+            <p><strong>Skills:</strong> <span id="profileSkills"></span></p>
+            <p><strong>Contact:</strong> <span id="profileContact"></span></p>
+        </div>
+
+        <!-- Job Vacancies Section (Initially Hidden) -->
+        <div id="jobVacanciesSection" style="display: none;">
+            <h3>Available Job Vacancies</h3>
+            <ul id="jobList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
